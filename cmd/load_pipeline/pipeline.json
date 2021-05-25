@@ -1,0 +1,49 @@
+{
+    "entrypoint": "d93181d",
+    "timeout": 2332,
+    "name": "sdjdskj",
+    "nodes": [
+        {
+            "id": "d93181d",
+            "name": "user defined name (e.g. start)",
+            "type": "DEVICE_RESPONSE",
+            "attributes": {
+                "output": ["fwd3242"]
+            },
+            "draw": {
+                "x": 1231,
+                "y": 1221
+            },
+            "children": ["fwd3242"]
+        },
+        {
+            "id": "fwd3242",
+            "name": "is temp hot?",
+            "type": "CONDITION",
+            "attributes": {
+                "condition": "js?",
+                "then": ["ttrg3f"],
+                "else": []
+            },
+            "draw": {
+                "x": 2443,
+                "y": 3232
+            },
+            "children": ["ttrg3f"]
+        },
+        {
+            "id": "ttrg3f",
+            "name": "invoke dev2",
+            "type": "DEVICE_INVOKE",
+            "attributes": {
+                "on_success": [],
+                "on_fail": []
+            },
+            "draw": {
+                "x": 2443,
+                "y": 3232
+            },
+            "children": []
+        }
+    ]
+}
