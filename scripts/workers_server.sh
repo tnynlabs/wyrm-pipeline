@@ -1,0 +1,1 @@
+go run cmd/workers_server/main.go

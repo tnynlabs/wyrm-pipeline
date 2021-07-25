@@ -5,44 +5,43 @@
     "nodes": [
         {
             "id": "d93181d",
-            "name": "user defined name (e.g. start)",
-            "type": "DEVICE_RESPONSE",
+            "name": "webhook",
+            "type": "WEBHOOK_TRIGGER",
             "attributes": {
-                "output": ["fwd3242"]
+                "auth_key": "klbwbdibobi"
             },
-            "draw": {
-                "x": 1231,
-                "y": 1221
-            },
-            "children": ["fwd3242"]
+            "coordinates": [2443, 3232],
+            "children": ["fwd3242", "322243"]
         },
         {
             "id": "fwd3242",
-            "name": "is temp hot?",
+            "name": "conidition 1",
             "type": "CONDITION",
             "attributes": {
-                "condition": "js?",
-                "then": ["ttrg3f"],
-                "else": []
+                "expr": "EXISTS payload && payload == 'zozo'"
             },
-            "draw": {
-                "x": 2443,
-                "y": 3232
+            "coordinates": [2443, 3232],
+            "children": ["ttrg3f"]
+        },
+        {
+            "id": "322243",
+            "name": "condition 2",
+            "type": "CONDITION",
+            "attributes": {
+                "expr": "payload != 'nour'"
             },
+            "coordinates": [2443, 3232],
             "children": ["ttrg3f"]
         },
         {
             "id": "ttrg3f",
-            "name": "invoke dev2",
-            "type": "DEVICE_INVOKE",
+            "name": "invoke dev",
+            "type": "INVOKE_DEVICE",
             "attributes": {
-                "on_success": [],
-                "on_fail": []
+                "device_id": 1,
+                "pattern": "turn_on"
             },
-            "draw": {
-                "x": 2443,
-                "y": 3232
-            },
+            "coordinates": [2443, 3232],
             "children": []
         }
     ]

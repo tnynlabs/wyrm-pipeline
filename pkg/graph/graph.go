@@ -6,7 +6,7 @@ import (
 
 type Graph struct {
 	Entrypoint Node
-	Nodes map[string]Node
+	Nodes      map[string]Node
 }
 
 func (g *Graph) GetNode(id string) (Node, error) {
@@ -18,6 +18,6 @@ func (g *Graph) GetNode(id string) (Node, error) {
 }
 
 type GraphData struct {
-	Entrypoint string	`json:"entrypoint"`
-	Nodes []NodeData	`json:"nodes"`
+	Entrypoint string     `json:"entrypoint"`
+	Nodes      []NodeData `json:"nodes"`
 }
